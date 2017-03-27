@@ -1,0 +1,266 @@
+* {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+
+/* ---------- HEADER ---------- */
+
+.ui-page-theme-c .ui-header {
+	background: #333333;
+	border: none;
+	box-shadow: 0px 5px 5px #000;
+	float: left;
+	width: 100%;
+}
+.ui-page-theme-c#landing .ui-header .ui-title {
+	padding: 5px;
+}
+.ui-page-theme-c#landing .ui-header img {
+	height: 40px;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+/* ---------- OTHER HEADER ---------- */
+
+.ui-page-theme-c:not(#landing) .ui-header .ui-title {
+	padding: 5px;
+	float: left;
+	margin: 0 5px;
+}
+.ui-page-theme-c:not(#landing) .ui-header .ui-title img{
+	height: 40px;
+	display: block;
+}
+
+/* ---------- LANDING ---------- */
+
+.ui-page-theme-c#landing article.ui-content {
+	background: url(images/landing.png);
+	min-height: calc(100vh - 40px);
+	background-size: cover;
+}
+.ui-page-theme-c#landing h2,
+.ui-page-theme-c#landing p {
+	color: #FFF;
+	text-align: center;
+}
+.ui-page-theme-c#landing h2 {
+	font-style: italic;
+}
+.ui-page-theme-c#landing .ui-btn {
+	color: #FFF;
+	border: none;
+}
+.ui-page-theme-c#landing .ui-btn.ui-btn-b {
+	background-color: #ED1E79;
+	border-radius: 10px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-200px);
+	width: 200px;
+	height: 100%;
+	background: rgba(255, 92, 163, 1);/* For browsers that do not support gradients */
+	background: linear-gradient(to right, rgba(255, 92, 163, 1) 75%, rgb(115, 0, 50));/* Standard syntax */
+	background: -webkit-linear-gradient(left, rgba(255, 92, 163, 1) 75%, rgb(115, 0, 50)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgba(255, 92, 163, 1) 75%, rgb(115, 0, 50)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, rgba(255, 92, 163, 1) 75%, rgb(115, 0, 50)); /* For Firefox 3.6 to 15 */
+}
+nav ul li {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 0px;
+}
+nav ul li a {
+	color: #FFF;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.outer-wrap {
+	width: 100%;
+	overflow: hidden;
+}
+.inner-wrap {
+	position: relative;
+	width: 100%;
+	transition: transform 0.3s ease;
+	box-shadow: 10px #000;
+}
+.nav-active .inner-wrap {
+	transform: translateX(200px);
+}
+
+/* ---------- SEARCH FILTER ---------- */
+
+.ui-page-theme-c .ui-filterable {
+	float: left;
+	width: calc(100% - 120px);
+}
+.ui-page-theme-c .ui-filterable .ui-input-search {
+	background: #FFF;
+}
+
+/* ---------- LIST VIEW ---------- */
+
+.ui-page-theme-c .ui-listview .ui-btn {
+	border-top: none;
+	border-bottom: 1px solid #CCC;
+	padding: 1em;
+}
+.thumbnail {
+	width: 80px;
+	height: 80px;
+	background-size: cover;
+	float: left;
+	margin-right: 10px;
+}
+.ui-listview>li h1 {
+	color: #333;
+	margin: 0px 0px 5px 0px;
+}
+.ui-page-theme-c .reviews img {
+	width: 10px;
+	margin: 0;
+}
+.reviews, .episodes, .tags, .years, .description, .status {
+	display: block;
+	font-size: 12px;
+}
+.reviews {
+	color: #808080;
+}
+.episodes {
+	color: #4D4D4D;
+}
+.status {
+	background: #999999;
+	color: #FFF;
+	font-size: 13px;
+	padding: 5px 10px;
+	float: right;
+}
+.on-going {
+	background: #ED1E79;
+}
+.ui-btn-icon-right:after {
+	display: none;
+}
+
+/* ---------- SINGLE PAGE ---------- */
+
+#single1 .profile img, #single2 .profile img {
+	width: 125px;
+	float: left;
+	margin-right: 10px;
+}
+#single1 h1, #single2 h1, .single .episodes, .single .tags, .single .status {
+	margin: 0px 0px 10px 0px;
+}
+article.single.ui-content span.reviews {
+	font-size: 15px;
+}
+article.single.ui-content span.reviews img {
+	width: 15px;
+}
+.single .episodes, .single .tags, .single .years, .single .status {
+	font-size: 15px;
+	line-height: 1.75;
+}
+button.ui-btn {
+	width: 100%;
+	float: left;
+	margin: 0;
+	color: #ED1E79;
+	background-color: #FFF;
+	text-align: left;
+}
+.status.ui-corner-all.go-left {
+	float: none;
+	display: inline-block;
+}
+.single .description {
+	font-size: 16px;
+}
+.gallery {
+	max-width: 100%;
+	position: relative;
+	margin-top: 10px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.ui-page-theme-c#about h2 {
+	color: #ED1E79;
+	margin-top: 0px;
+}
+.map {
+	width: 100%;
+}
+.ui-icon-star::after,
+.ui-icon-clock::after,
+.ui-icon-video::after,
+.ui-icon-comment::after,
+.ui-icon-mail::after,
+.ui-icon-phone::after,
+.ui-icon-location::after {
+	background-color: #FF5CA3;
+}
+.ui-page-theme-c#about button.ui-btn {
+	background-color: #FFF;
+	text-align: left;
+	border: none;
+}
+
+/* ---------- FORM ---------- */
+
+#contactForm label {
+	font-style: italic;
+	font-size: 16px;
+}
+.ui-input-text input, .ui-input-search input {
+	height: 30px;
+}
+#contactForm #txtComment {
+	width: 100%;
+	min-height: 100px;
+}
+/*#contactForm #btnSubmit {
+	width: 100px;
+	border: none;
+	background-color: #FF5CA3;
+	color: #FFF;
+}*/
+
+/* ---------- FAQ ---------- */
+
+a.ui-collapsible-heading-toggle.ui-btn {
+	white-space: pre-wrap;
+}
+.ui-collapsible-heading-toggle {
+	color: #ED1E79;
+}
+.ui-icon-plus::after, .ui-icon-minus::after {
+	background-color: #FF5CA3;
+}
+
+/* ---------- FOOTER ---------- */
+
+.ui-footer {
+	background: #FFF;
+	border-top: 1px solid #FF5CA3;
+	
+}
+
+a.ui-link.ui-btn {
+	color: #FF5CA3;
+}

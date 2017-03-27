@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8 /">
+	<title>jQuery Mobile</title><!-- CSS -->
+	<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+	rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link href=
+	"http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+	rel="stylesheet"><!-- JS -->
+
+	<script src="js/jquery-3.0.0.min.js">
+	</script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js">
+	</script>
+	<script src="js/toggle.js">
+	</script>
+	<script>
+	      /* Google Chrome Security Workaround */
+	      $(document).bind('mobileinit',function(){
+	          $.mobile.changePage.defaults.changeHash = false;
+	          $.mobile.hashListeningEnabled = false;
+	          $.mobile.pushStateEnabled = false;
+	      });
+	</script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+	</script>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name=
+	"viewport">
+</head>
+<body>
+	<div data-role="page" data-theme="c" id="landing">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+		</header>
+		<article data-role="content">
+			<h2>Have Anime-zing experience</h2>
+			<p>Watch all of your favourite anime right here! New episodes are uploaded
+			daily.</p><a class="ui-btn ui-btn-b" href="#list">Open in the An'me App</a>
+			<a class="ui-btn" href="#list">Continue to mobile site</a>
+		</article>
+	</div>
+	<div data-role="page" data-theme="c" id="list">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+			<div data-filter="true"></div>
+		</header>
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Sign In</a>
+							</li>
+							<li>
+								<a href="#list">Anime</a>
+							</li>
+							<li>
+								<a href="#">Favourites</a>
+							</li>
+							<li>
+								<a href="#">Watch Later</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+							<li>
+								<a href="#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<article data-role="content">
+					<ul data-role="listview">
+						<li>
+							<a href="#single1">
+							<div class="thumbnail" style=
+							"background-image: url(images/clannad.jpg)"></div>
+							<h1>1. Clannad</h1><span class="reviews"><img src="images/rating+.png">
+							<img src="images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating+.png"> 19 Reviews</span>
+							<span class="episodes">Episode 024</span> <span class=
+							"status ui-corner-all">Finished</span></a>
+						</li>
+						<li>
+							<a href="#single2">
+							<div class="thumbnail" style="background-image: url(images/kanon.jpg)">
+							</div>
+							<h1>2. Kanon</h1><span class="reviews"><img src="images/rating+.png">
+							<img src="images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating-.png"> 17 Reviews</span>
+							<span class="episodes">Episode 024</span> <span class=
+							"status ui-corner-all">Finished</span></a>
+						</li>
+						<li>
+							<a href="#single1">
+							<div class="thumbnail" style=
+							"background-image: url(images/cardcaptor-sakura.jpg)"></div>
+							<h1>3. Cardcaptor Sakura</h1><span class="reviews"><img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> 25 Reviews</span> <span class="episodes">Episode
+							070</span> <span class="status ui-corner-all">Finished</span></a>
+						</li>
+						<li>
+							<a href="#single1">
+							<div class="thumbnail" style=
+							"background-image: url(images/twin-star-exorcists.jpg)"></div>
+							<h1>4. Twin Star Exorcists</h1><span class="reviews"><img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating-.png"> 16 Reviews</span> <span class="episodes">Episode
+							016</span> <span class=
+							"status ui-corner-all on-going">On-going</span></a>
+						</li>
+						<li>
+							<a href="#single1">
+							<div class="thumbnail" style=
+							"background-image: url(images/angel-beats.jpg)"></div>
+							<h1>5. Angel Beats!</h1><span class="reviews"><img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating-.png"> 18 Reviews</span> <span class="episodes">Episode
+							013</span> <span class="status ui-corner-all">Finished</span></a>
+						</li>
+						<li>
+							<a href="#single1">
+							<div class="thumbnail" style=
+							"background-image: url(images/clannad-after-story.jpg)"></div>
+							<h1>6. Clannad: After Story</h1><span class="reviews"><img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating+.png"> <img src="images/rating+.png"> <img src=
+							"images/rating-.png"> 20 Reviews</span> <span class="episodes">Episode
+							025</span> <span class="status ui-corner-all">Finished</span></a>
+						</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+		<div data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a class="toggle-nav" href="#"><i aria-hidden="true" class=
+						"fa fa-bars"></i> Menu</a>
+					</li>
+					<li>
+						<a href="#list"><i aria-hidden="true" class="fa fa-video-camera"></i>
+						Anime</a>
+					</li>
+					<li>
+						<a href="#"><i aria-hidden="true" class="fa fa-user"></i> Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="c" id="single1">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+			<div data-filter="true"></div>
+		</header>
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Sign In</a>
+							</li>
+							<li>
+								<a href="#list">Anime</a>
+							</li>
+							<li>
+								<a href="#">Favourites</a>
+							</li>
+							<li>
+								<a href="#">Watch Later</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+							<li>
+								<a href="#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<article class="single" data-role="content">
+					<div class="profile"><img src="images/clannad.jpg"></div>
+					<h1>Clannad</h1><span class="reviews"><img src="images/rating+.png">
+					<img src="images/rating+.png"> <img src="images/rating+.png"> <img src=
+					"images/rating+.png"> <img src="images/rating+.png"> 19 Reviews</span>
+					<span class="episodes">Episode 024</span> <span class=
+					"years">2007-2008</span> <span class="tags">Drama, Fantasy, Romance</span>
+					<span class="status ui-corner-all go-left">Finished</span> <span class=
+					"description">Tortured by his past and pained by an uncertain future,
+					Tomoya drifts through life with an almost overwhelming anger and
+					emptiness. But when he meets the mysterious, charming and shy Nagisa, his
+					world seems to change. Drawn in by her gentle but lonely spirit, he begins
+					to experience the joy life can bring. But as he discovers the reason for
+					his newfound friend's loneliness, Tomoya finds that life can be
+					frighteningly fragile.</span>
+					<div class="gallery">
+						<img class="mySlides" src="images/clannad1.jpg"> <img class="mySlides"
+						src="images/clannad2.jpg"> <img class="mySlides" src=
+						"images/clannad3.jpg"> <img class="mySlides" src="images/clannad4.jpg">
+						<img class="mySlides" src="images/clannad5.jpg"> <a class=
+						"ui-btn-icon-left ui-icon-carat-l" onclick="plusDivs(-1)" style=
+						"position:absolute;top:45%;left:0"></a> <a class=
+						"ui-btn-icon-left ui-icon-carat-r" onclick="plusDivs(1)" style=
+						"position:absolute;top:45%;right:0"></a>
+					</div>
+					<script>
+					                      var slideIndex = 1;
+					                      showDivs(slideIndex);
+
+					                      function plusDivs(n) {
+					                        showDivs(slideIndex += n);
+					                      }
+
+					                      function showDivs(n) {
+					                        var i;
+					                        var x = document.getElementsByClassName("mySlides");
+					                        if (n > x.length) {slideIndex = 1}
+					                        if (n < 1) {slideIndex = x.length}
+					                        for (i = 0; i < x.length; i++) {
+					                           x[i].style.display = "none";
+					                        }
+					                        x[slideIndex-1].style.display = "block";
+					                      }
+					</script>
+				</article><a href="#list"><button class=
+				"ui-btn ui-btn-icon-left ui-icon-star btn-half">Favourite</button></a>
+				<a href="#list"><button class=
+				"ui-btn ui-btn-icon-left ui-icon-clock btn-half">Watch Later</button></a>
+				<a href="#list"><button class=
+				"ui-btn ui-btn-icon-left ui-icon-video">Episodes</button></a> <a href=
+				"#list"><button class="ui-btn ui-btn-icon-left ui-icon-comment">Write a
+				Review</button></a>
+			</div>
+		</div>
+		<div data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a class="toggle-nav" href="#"><i aria-hidden="true" class=
+						"fa fa-bars"></i> Menu</a>
+					</li>
+					<li>
+						<a href="#list"><i aria-hidden="true" class="fa fa-video-camera"></i>
+						Anime</a>
+					</li>
+					<li>
+						<a href="#"><i aria-hidden="true" class="fa fa-user"></i> Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="c" id="single2">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+			<div data-filter="true"></div>
+		</header>
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Sign In</a>
+							</li>
+							<li>
+								<a href="#list">Anime</a>
+							</li>
+							<li>
+								<a href="#">Favourites</a>
+							</li>
+							<li>
+								<a href="#">Watch Later</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+							<li>
+								<a href="#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<article class="single" data-role="content">
+					<div class="profile"><img src="images/kanon.jpg"></div>
+					<h1>Kanon</h1><span class="reviews"><img src="images/rating+.png">
+					<img src="images/rating+.png"> <img src="images/rating+.png"> <img src=
+					"images/rating+.png"> <img src="images/rating-.png"> 19 Reviews</span>
+					<span class="episodes">Episode 024</span> <span class=
+					"years">2006-2007</span> <span class="tags">Drama, Fantasy, Romance</span>
+					<span class="status ui-corner-all go-left">Finished</span> <span class=
+					"description">Yuichi hasn't seen his cousin Nayuki in years. Now that he's
+					back, all knowledge of ever visiting has vanished. He tries to adjust to
+					the vaguely familiar surroundings, but the gaps in his memory haunt him as
+					time grows short. The pieces of the puzzle have appeared - an eerily
+					silent beauty with blazing tresses, the mysterious girl with the winged
+					backpack, and the sword-wielding demon slayer - but it's up to Yuichi to
+					discover how they fit together.</span> <img src="images/kanon1.png">
+				</article><a href="#list"><button class=
+				"ui-btn ui-btn-icon-left ui-icon-star">Favourite</button></a> <a href=
+				"#list"><button class="ui-btn ui-btn-icon-left ui-icon-clock">Watch
+				Later</button></a> <a href="#list"><button class=
+				"ui-btn ui-btn-icon-left ui-icon-video">Episodes</button></a> <a href=
+				"#list"><button class="ui-btn ui-btn-icon-left ui-icon-comment">Write a
+				Review</button></a>
+			</div>
+		</div>
+		<div data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a class="toggle-nav" href="#"><i aria-hidden="true" class=
+						"fa fa-bars"></i> Menu</a>
+					</li>
+					<li>
+						<a href="#list"><i aria-hidden="true" class="fa fa-video-camera"></i>
+						Anime</a>
+					</li>
+					<li>
+						<a href="#"><i aria-hidden="true" class="fa fa-user"></i> Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="c" id="about">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+			<div data-filter="true"></div>
+		</header>
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Sign In</a>
+							</li>
+							<li>
+								<a href="#list">Anime</a>
+							</li>
+							<li>
+								<a href="#">Favourites</a>
+							</li>
+							<li>
+								<a href="#">Watch Later</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+							<li>
+								<a href="#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<article data-role="content">
+					<span></span>
+					<h2><span>About Us</span></h2>
+					<p><span>Welcome to An'me! The most popular and best place to stream all
+					kinds of anime online!</span></p>
+					<p><span>Watch all of your favourite anime in HD quality. New episodes are
+					always being uploaded almost immediately after they air on television, so
+					you are never left waiting long.</span></p>
+					<p><span>Our anime videos are all 720p and/or 1080p giving you the best
+					possible quality for your anime watching needs. We have both Japanese and
+					English dub (if available) along with optional subtitles. Make a free
+					account today and you can start watching right away!</span></p>
+					<p><span>Got too many anime you want to watch? Not enough time to watch
+					them all in one sitting? Worried you won't be able to remember or find all
+					of your anime? No worries!</span></p>
+					<p><span>You can Favourite your favourite anime and receive notifications
+					on any new episodes or updates so you'll never miss out on
+					anything.</span></p>
+					<p><span>Also use our Watch Later feature to be reminded to watch specific
+					videos when you're ready for them later.</span></p>
+					<p><span>So what are you waiting for!? Hurry and sign up
+					today!</span></p><button class=
+					"ui-btn ui-btn-icon-left ui-icon-mail">anme@gotmail.com</button>
+					<button class=
+					"ui-btn ui-btn-icon-left ui-icon-phone">1-800-666-3629</button>
+					<button class="ui-btn ui-btn-icon-left ui-icon-location">Tokyo,
+					Japan</button>
+				</article><iframe allowfullscreen="" class="map" frameborder="0" height=
+				"250" src=
+				"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207443.78907067742!2d139.601297307033!3d35.66938775758295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C+Japan!5e0!3m2!1sen!2sca!4v1470937122959"
+				style="border:0" width="600"></iframe>
+				<div>
+					<form action="#" method="post" id="contactForm">
+						<label for="txtEmail">Email</label>
+						<input type="email" name="txtEmail" id="txtEmail">
+						<label for="txtComment">Comment</label>
+						<input type="textarea" name="txtComment" id="txtComment">
+						<input type="button" name="btnSubmit" id="btnSubmit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a class="toggle-nav" href="#"><i aria-hidden="true" class=
+						"fa fa-bars"></i> Menu</a>
+					</li>
+					<li>
+						<a href="#list"><i aria-hidden="true" class="fa fa-video-camera"></i>
+						Anime</a>
+					</li>
+					<li>
+						<a href="#"><i aria-hidden="true" class="fa fa-user"></i> Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="c" id="faq">
+		<header data-role="header">
+			<h1><img src="images/logo.png"></h1>
+			<div data-filter="true"></div>
+		</header>
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Sign In</a>
+							</li>
+							<li>
+								<a href="#list">Anime</a>
+							</li>
+							<li>
+								<a href="#">Favourites</a>
+							</li>
+							<li>
+								<a href="#">Watch Later</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+							<li>
+								<a href="#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<article data-role="content">
+					<div class="page-theme-a" data-role="collapsible">
+						<h3>What quality do you show your anime in?</h3>
+						<p>We have 720p and 1080p, the best quality around.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Do you have to pay to make an account?</h3>
+						<p>No, there is no need to pay for an account. Sign up for a free account
+						today and start watching your anime.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Do your videos have English subtitles?</h3>
+						<p>Yes, we do. Click on the subtitle setting to toggle subtitles on and
+						off when needed.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>What are the top 5 best animes?</h3>
+						<p>According to our most recent studies, 98.9% of your fanbase believes
+						that Cardcaptor Sakura, Clannad, Kanon, Twin Star Exorcists, and Angel
+						Beats are the 5 best animes of all time.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>How does the Watch Later work?</h3>
+						<p>Just add the video you want to watch to your Watch Later list and you
+						will be reminded that you need to watch the video later.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>What is anime?</h3>
+						<p>We can't believe you don't know what anime is... For shame...</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>What is so great about anime?</h3>
+						<p>ONLY EVERYTHING, AND IF YOU HAVE TO ASK THEN YOU DON'T DESERVE TO BE
+						ON THIS SITE.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Why did you spell anime wrong?</h3>
+						<p>We wanted to appeal to the cool, hip and non-nerdy audience.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Can I watch anime here?</h3>
+						<p>Yes, that is the only thing you can do here.</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Who doesn't love anime!?</h3>
+						<p>I know right anime is the best!</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a class="toggle-nav" href="#"><i aria-hidden="true" class=
+						"fa fa-bars"></i> Menu</a>
+					</li>
+					<li>
+						<a href="#list"><i aria-hidden="true" class="fa fa-video-camera"></i>
+						Anime</a>
+					</li>
+					<li>
+						<a href="#"><i aria-hidden="true" class="fa fa-user"></i> Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
